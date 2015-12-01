@@ -13,16 +13,8 @@ class ListeQuestion {
 		this.reponse = reponse;
 	}
 
-	void donnerQuestion()
+	boolean donnerQuestion()
 	{
-		
-	}
-}
-
-
-/*
-*	public static boolean poserQuestion(){ //pose une question
-
 		Scanner sc = new Scanner(System.in);
 		System.out.println("2 + 2 =");
 		int reponse = sc.nextInt(); //récuperer ce que l'on a écrit
@@ -34,5 +26,7 @@ class ListeQuestion {
 			System.out.println("T'es qu'une merde ! tu restes sur place ;D");
 			return false;
 		}
+		
 	}
-*/
+}
+

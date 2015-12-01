@@ -27,12 +27,13 @@ public class Joueur { //initialise un joueur
 	
 	public void bougerJoueur(){
 		switch(this.position){
-		case 6 : this.setPosition(14);
-		case 12 : this.setPosition(30);
-		case 15 : this.setPosition(5);
-		case 16 : this.setPosition(26);
-		case 24 : this.setPosition(18);
-		case 29 : this.setPosition(13);
+		case 6 : this.setPosition(14); break;
+		case 12 : this.setPosition(30); break;
+		case 15 : this.setPosition(5); break;
+		case 16 : this.setPosition(26); break;
+		case 24 : this.setPosition(18); break;
+		case 29 : this.setPosition(13); break;
+		default : System.out.println("ERREUR OMG OMG OMG OMG");
 		}
 	}
 	
