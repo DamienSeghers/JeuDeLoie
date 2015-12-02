@@ -7,7 +7,7 @@ import be.ephec.Controler.*;
 public class Test {
 
 	public static void main(String[] args) {
-		
+	// Test by SB on github	
 		Fenetre fen = new Fenetre();
 
 	}
