@@ -1,18 +1,20 @@
 package be.ephec.Player;
 
-public class Joueur { //initialise un joueur 
+import java.awt.Graphics;
+
+public class Joueur {
 	private String nom;
-	private int position = 0; //position du joueur, l'endroit ou il est
-	private boolean etat;
+	private boolean etat = false;
+	private int position = 0; 
 	
-	Joueur joueur1 = new Joueur(); //creation de l'objet joueur
+	Joueur joueur1 = new Joueur("Joueur1", false, 0);
 	
-	//constructeur
-	public Joueur(){
+	public Joueur(String nomJoueur, boolean etatJoueur, int positionJoueur){
 		//création d'un joueur
-		nom = "joueur1"; //nom du joueur
-		etat = false; //etat du joueur
-		position; //position à 0 de base
-	}
+		nom = nomJoueur; //nom du joueur
+		etat = etatJoueur;//etat du joueur
+		position = positionJoueur;  //position du joeur
+		}
+
 	
 }
