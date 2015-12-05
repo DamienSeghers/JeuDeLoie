@@ -5,7 +5,8 @@ import java.awt.Graphics;
 public class Joueur {
 	private String nom;
 	private boolean etat = false;
-	private int position = 0; 
+	private int position = 0;
+	private Pion p1;
 	
 	Joueur joueur1 = new Joueur("Joueur1", false, 0);
 	
@@ -14,7 +15,8 @@ public class Joueur {
 		nom = nomJoueur; //nom du joueur
 		etat = etatJoueur;//etat du joueur
 		position = positionJoueur;  //position du joeur
-		}
+		Pion p = new Pion(null, 20,20);
 
+		}
 	
 }
