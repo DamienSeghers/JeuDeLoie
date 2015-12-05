@@ -1,11 +1,23 @@
 package be.ephec.Player;
 
-public abstract class Pion {
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JPanel;
+
+public class Pion extends JPanel{
 	private int numCase;
 	private int posX;
-	private int posY;
+	public int posY;
+	public String couleur;
 	
-	  public int getPosX() {
+	
+	
+	public Pion(Graphics p, int posX, int posY){
+		p.setColor(Color.BLACK);
+		p.fillOval(posX, posY, 45, 45);
+	}
+	
+	public int getPosX() {
 		    return posX;
 		  }
 	  public int getPosY() {
@@ -18,3 +30,5 @@ public abstract class Pion {
 
 	}
 	
+
+
