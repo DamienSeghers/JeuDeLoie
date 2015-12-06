@@ -8,13 +8,18 @@ public class Pion extends JPanel{
 	private int numCase;
 	private int posX;
 	public int posY;
-	public String couleur;
+	public Color couleur;
 	
-	
-	
-	public Pion(Graphics p, int posX, int posY){
-		p.setColor(Color.BLACK);
+	public Pion(Graphics p,Color couleur, int posX, int posY){
+		p.setColor(couleur);
 		p.fillOval(posX, posY, 45, 45);
+	}
+	
+	public Color getColor(){
+		return couleur;
+	}
+	public void setColor(Color couleur){
+		this.couleur = couleur;
 	}
 	
 	public int getPosX() {
@@ -27,8 +32,5 @@ public class Pion extends JPanel{
 		    this.posX = posX;
 		    this.posY = posY;
 		  }
-
 	}
 	
-
-
