@@ -7,7 +7,7 @@ public class Joueur {
 	private String nom;
 	private boolean etat = false;
 	private int position = 0;
-	private Pion p;
+	private Pion p1;
 	
 	Joueur joueur1 = new Joueur("Joueur1", false, 0,Color.red);
 	
@@ -16,6 +16,6 @@ public class Joueur {
 		nom = nomJoueur; //nom du joueur
 		etat = etatJoueur;//etat du joueur
 		position = positionJoueur;  //position du joeur
-		Pion p = new Pion(null,couleur,20,20);		//explique a quoi sert null
+		Pion p = new Pion(null,couleur,20,20); 
 		}
 }
