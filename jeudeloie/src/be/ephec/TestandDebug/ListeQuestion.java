@@ -21,13 +21,25 @@ public class ListeQuestion {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(tabQuestion[nombre]); //affiche la question
 		int reponse = sc.nextInt(); //récuperer ce que l'on a écrit
-		if (reponse == 4 || reponse ==9 || reponse == 20 || reponse == 8 || reponse == 13){ //teste la reponse
-			System.out.println("Tu es plus intelligent que je ne le pensais. Tu peux relancer le dé :D ");
-			return true;
+		switch(reponse){
+		case 4:
+			System.out.println("Bonne réponse !");
+			break;
+		case 9:
+			System.out.println("Bonne réponse !");
+			break;
+		case 20:
+			System.out.println("Bonne réponse !");
+			break;
+		case 8:
+			System.out.println("Bonne réponse !");
+			break;
+		case 13:
+			System.out.println("Bonne réponse !");
+			break;
+		default:
+			System.out.println("Mauvaise réponse !!!!");
 		}
-		else {//mauvaise réponse
-			System.out.println("T'es qu'une merde ! tu restes sur place ;D");
-			return false;
-		}
+		return false;
 	}
 }
