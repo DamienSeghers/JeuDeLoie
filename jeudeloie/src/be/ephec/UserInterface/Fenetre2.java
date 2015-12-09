@@ -1,12 +1,11 @@
 package be.ephec.UserInterface;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
-import javax.swing.BoxLayout;
+
 
 public class Fenetre2 {
 
@@ -46,20 +45,27 @@ public class Fenetre2 {
 		frmJeuDeLoie.setLocationRelativeTo(null);
 		Fond fond = new Fond();
 		frmJeuDeLoie.setContentPane(fond);
-		fond.setLayout(new BoxLayout(fond, BoxLayout.X_AXIS));
+		System.out.println(frmJeuDeLoie.getSize());
+		System.out.println(fond.getSize());
 		
 		JLabel labelTitle = new JLabel("Jeu de l'oie");
+		labelTitle.setBounds(265, 10, 150, 40);
 		labelTitle.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		frmJeuDeLoie.getContentPane().add(labelTitle);
 		
-		JLabel labelText1 = new JLabel("C'est au tour de :");
-		frmJeuDeLoie.getContentPane().add(labelText1);
+		JLabel labelText1 = new JLabel("C'est au tour de : ");
+		labelText1.setBounds(100, 60, 100, 15);
 		
-		JLabel labelText2 = new JLabel("");
-		frmJeuDeLoie.getContentPane().add(labelText2);
+		JLabel labelText2 = new JLabel("JoueurName");
+		labelText2.setBounds(500, 60, 150, 15);
 		
 		JButton boutonLancerDe = new JButton("Lancer dé");
-		frmJeuDeLoie.getContentPane().add(boutonLancerDe);
+		boutonLancerDe.setBounds(582, 80, 105, 25);
+		
+		fond.setLayout(null);
+		fond.add(labelText2);
+		fond.add(labelTitle);
+		fond.add(labelText1);
+		fond.add(boutonLancerDe);
 	}
 
 }
