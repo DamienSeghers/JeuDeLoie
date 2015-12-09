@@ -1,3 +1,4 @@
+
 package be.ephec.TestandDebug;
 
 import java.util.Scanner;
@@ -26,39 +27,40 @@ public class ListeQuestion {
 		boolean resultat = false;  // initialise la variable du return
 		
 		switch (nombre) {
-		case 0 :  { //case selon la question 
-			if (reponse == 4){ //teste la reponse
-				System.out.println("Bonne réponse !");
-				resultat =true; 
+		case 0 :  {
+			if (reponse == 4){
+				resultat =true; //teste la reponse
 			}
 			break;
-		}
+		 }
 		case 1 :  {
-			if (reponse == 9){ 
-				System.out.println("Bonne réponse !");
+			if (reponse == 9){
 				resultat =true;
 			}
 			break;
-		}
+		 }
 		case 2 :  {
-			if (reponse == 20){ 
-				System.out.println("Bonne réponse !");
+			if (reponse == 20) {
 				resultat =true;
 			}
 			break;
-		}
+		 }
 		case 3 :  {
-			if (reponse == 6){ 
-				System.out.println("Bonne réponse !");
+			if (reponse == 6) {
 				resultat =true;
 			}
 			break;
-		}
+		 }
 		default: {
-			System.out.println("Mauvaise réponse !");
-			resultat = false; 
+			System.out.println("Bug tableau question OMG OMG OMG OMG ");
 			break;
-			}
+		 }
+		}
+		if (resultat == true) { // ici c'était la faute avec le doucle =
+			System.out.println("Bonne réponse !");
+		}
+		else {
+			System.out.println("Mauvaise réponse !");
 		}
 		return resultat;
 	}
