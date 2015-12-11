@@ -4,7 +4,7 @@ package be.ephec.TestandDebug;
 import java.util.Scanner;
 
 public class ListeQuestion {
-	private boolean reponse;
+	private boolean resultat;
 	public int nombre = (int)(Math.random()*4);  //générer un nombre entre 0 et 3
 	String tabQuestion[] = {"Question : 2+2 = ?",
 							"Question : 18/2 = ?",
@@ -12,15 +12,15 @@ public class ListeQuestion {
 							"Question : 8-2 = ?",}; //tableau des questions
 
 	public boolean isReponse() {
-		return reponse;
+		return resultat;
 	}
 
-	public void setReponse(boolean reponse) {
-		this.reponse = reponse;
+	public void setReponse(boolean resultat) {
+		this.resultat = resultat;
 	}
 
-	boolean donnerQuestion()
-	{
+	boolean donnerQuestion(){
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println(tabQuestion[nombre]); //affiche la question
 		int reponse = sc.nextInt(); //récuperer ce que l'on a écrit
