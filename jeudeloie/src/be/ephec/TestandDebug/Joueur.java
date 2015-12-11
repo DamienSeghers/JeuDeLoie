@@ -4,7 +4,7 @@ public class Joueur { //initialise un joueur
 	private String nom = "Damien";
 	private int position = 0;
 	private boolean sonTour;
-	private Event event = new Event(); // Pour prendre les constantes pour plus de visibilité ( voir faireAction())
+	private Event event = new Event(); // Pour prendre les constantes pour plus de visibilitÃ© ( voir faireAction())
 	private ListeQuestion quest = new ListeQuestion();
 	public String getNom() {
 		return nom;
@@ -38,16 +38,21 @@ public class Joueur { //initialise un joueur
 	}
 	
 	public void questionJoueur(){
-		quest.donnerQuestion(); //donne question ( à faire )
-		if(quest.isReponse())  // Si il repond bien il pourra rejouer
-			this.sonTour = true;
-		else this.sonTour = false;
+		quest.donnerQuestion(); //donne question
+		if(quest.isReponse()){
+			this.sonTour = true;// Si il repond bien il pourra rejouer
+		}	
+		else {
+			this.sonTour = false;
+		}
 			
 	}
 	
 	public void faireAction(int typeAction){
-		if(typeAction == event.NO_ACTION)
+		if(typeAction == event.NO_ACTION){
 			this.sonTour = false;
+		}
+			
 		if(typeAction == event.MOVE_ACTION){
 			bougerJoueur();
 			this.sonTour = false;
