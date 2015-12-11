@@ -28,7 +28,7 @@ public class Fenetre2 {
 	private void initialize() {
 		frmJeuDeLoie = new JFrame();
 		frmJeuDeLoie.setTitle("Jeu de l'oie");
-		frmJeuDeLoie.setBounds(100, 100, 713, 560);
+		frmJeuDeLoie.setBounds(100, 100, 900, 600);
 		frmJeuDeLoie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJeuDeLoie.setLocationRelativeTo(null);
 		Fond fond = new Fond();
@@ -43,13 +43,14 @@ public class Fenetre2 {
 		JLabel labelTitle = new JLabel("Jeu de l'oie");
 		panel.add(labelTitle, BorderLayout.NORTH);
 		labelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		labelTitle.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		labelTitle.setFont(new Font("Tahoma", Font.PLAIN, 60));
 		labelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		
 		JButton boutonLancerDe = new JButton("Lancer dé");
+		boutonLancerDe.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		//boutonLancerDe.setEnabled(false);
 		panel.add(boutonLancerDe, BorderLayout.EAST);
-		//boutonLancerDe.setSize(300, 50);  														//NOT WORK
-		
+				
 		JPanel panel_1 = new JPanel();
 		panel.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -58,13 +59,14 @@ public class Fenetre2 {
 		JLabel labelText1 = new JLabel("C'est au tour de : ");
 		panel_1.add(labelText1);
 		labelText1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		labelText1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		
 		JLabel labelText2 = new JLabel("JoueurName");
+		labelText2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		panel_1.add(labelText2);
 		
 		JButton btnNewButton = new JButton("Relancer le jeu");
-		//btnNewButton.setSize(new Dimension(500, 0));  											//NOT WORK
-		btnNewButton.setSize(300, 50);
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
