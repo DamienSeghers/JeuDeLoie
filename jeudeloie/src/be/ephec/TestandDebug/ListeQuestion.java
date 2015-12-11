@@ -7,9 +7,9 @@ public class ListeQuestion {
 	private boolean resultat;
 	public int nombre = (int)(Math.random()*4);  //générer un nombre entre 0 et 3
 	String tabQuestion[] = {"Question : 2+2 = ?",
-							"Question : 18/2 = ?",
-							"Question : 10*2 = ?",
-							"Question : 8-2 = ?",}; //tableau des questions
+				"Question : 18/2 = ?",
+				"Question : 10*2 = ?",
+				"Question : 8-2 = ?",}; //tableau des questions
 
 	public boolean isReponse() {
 		return resultat;
