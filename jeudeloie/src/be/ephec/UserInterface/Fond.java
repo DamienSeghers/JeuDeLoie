@@ -1,5 +1,6 @@
 package be.ephec.UserInterface;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
@@ -7,6 +8,8 @@ import java.io.IOException;//plateau.jpeg
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+
+import be.ephec.Player.Joueur;
 
 public class Fond extends JPanel {
 	public void paintComponent(Graphics g){
@@ -25,7 +28,7 @@ public class Fond extends JPanel {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-	Joueur joueur1 = new Joueur("Joueur1", false, 0,g,Color.blue, 105,115);
+
+		Joueur joueur1 = new Joueur("Joueur1", false, 0,g,Color.blue, 105,115);
 	}
 }
