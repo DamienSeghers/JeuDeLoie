@@ -17,15 +17,15 @@ public class Fond extends JPanel {
 			System.out.println("largeur = " + this.getWidth());
 			System.out.println("hauteur = " + this.getHeight());
 			/* 
-			 * img => image (à la racin du projet)
-			 * 0,0 => point de dépard
-			 * this.getWidth(), this.getHeight() => taille de l'image, varie selon la fenêtre 
+			 * img => image (Ã  la racin du projet)
+			 * 0,0 => point de dÃ©pard
+			 * this.getWidth(), this.getHeight() => taille de l'image, varie selon la fenÃªtre 
 			 * this => observer 
 			 */
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
-		
+	Joueur joueur1 = new Joueur("Joueur1", false, 0,g,Color.blue, 105,115);
 	}
 }
