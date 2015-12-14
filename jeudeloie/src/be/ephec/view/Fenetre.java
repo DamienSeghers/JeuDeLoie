@@ -23,11 +23,11 @@ public class Fenetre {
 	 */
 	private void initialize() {
 		frmJeuDeLoie = new JFrame();
-		frmJeuDeLoie.setResizable(false);										//empeche de changer la taille de la fenetre
+		frmJeuDeLoie.setResizable(false);		//empeche de changer la taille de la fenetre
 		frmJeuDeLoie.setTitle("Jeu de l'oie");
-		frmJeuDeLoie.setBounds(100, 100, 1024, 627);							//taille de la fenetre
+		frmJeuDeLoie.setBounds(100, 100, 1024, 627);	//taille de la fenetre
 		frmJeuDeLoie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmJeuDeLoie.setLocationRelativeTo(null);								//centre la fenetre automatiquement
+		frmJeuDeLoie.setLocationRelativeTo(null);	//centre la fenetre automatiquement
 		Fond fond = new Fond();
 		frmJeuDeLoie.setContentPane(fond);
 		fond.setLayout(new BorderLayout(0, 0));
@@ -35,36 +35,51 @@ public class Fenetre {
 		JPanel head = new JPanel();
 		fond.add(head, BorderLayout.NORTH);
 		head.setLayout(new BorderLayout(0, 0));
-		head.setOpaque(false);													//rend le jpanel transparent
+		head.setOpaque(false);		//rend le jpanel transparent
 
 		JLabel labelTitle = new JLabel("Jeu de l'oie");
 		head.add(labelTitle, BorderLayout.NORTH);
 		labelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		labelTitle.setFont(new Font("Tahoma", Font.PLAIN, 60));					//change la police du texte
-		labelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		labelTitle.setFont(new Font("Tahoma", Font.PLAIN, 60));		//change la police du texte
 
 		JButton boutonLancerDe = new JButton("Lancer dé");
 		boutonLancerDe.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		//boutonLancerDe.setEnabled(false);										//desactive le bouton pour le(s) joueur(s) dont c'est pas le tour
+		//boutonLancerDe.setEnabled(false);			//desactive le bouton pour le(s) joueur(s) dont c'est pas le tour
 		head.add(boutonLancerDe, BorderLayout.EAST);
-
-		JPanel joueurTour = new JPanel();
-		head.add(joueurTour, BorderLayout.CENTER);
-		joueurTour.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		joueurTour.setOpaque(false);
-		
-		JLabel jlabelJoueurTour = new JLabel("C'est au tour de : ");
-		joueurTour.add(jlabelJoueurTour);
-		jlabelJoueurTour.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jlabelJoueurTour.setFont(new Font("Tahoma", Font.PLAIN, 20));
-
-		JLabel jlableJoueurName = new JLabel("JoueurName");									//ici doit arriver le nom du joueur actif...
-		jlableJoueurName.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		joueurTour.add(jlableJoueurName);
 
 		JButton boutonRejouer = new JButton("Relancer le jeu");
 		boutonRejouer.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		head.add(boutonRejouer, BorderLayout.WEST);
+										
+		JPanel jpanelCentre = new JPanel();
+		head.add(jpanelCentre, BorderLayout.CENTER);
+		jpanelCentre.setLayout(new BorderLayout(0, 0));
+		jpanelCentre.setOpaque(false);
+										
+		JPanel jpanelJoueur = new JPanel();
+		jpanelCentre.add(jpanelJoueur, BorderLayout.WEST);
+		jpanelJoueur.setOpaque(false);
+										
+		JLabel jlabelJoueurTour = new JLabel("C'est au tour de : ");
+		jpanelJoueur.add(jlabelJoueurTour);
+		jlabelJoueurTour.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+		jlabelJoueurTour.setFont(new Font("Tahoma", Font.PLAIN, 20));
+										
+		JLabel jlableJoueurName = new JLabel("JoueurName");			//ici doit arriver le nom du joueur actif...
+		jpanelJoueur.add(jlableJoueurName);
+		jlableJoueurName.setFont(new Font("Tahoma", Font.PLAIN, 20));
+												
+		JPanel jpanelDe = new JPanel();
+		jpanelCentre.add(jpanelDe, BorderLayout.EAST);
+		jpanelDe.setOpaque(false);
+												
+		JLabel jlabelDe1 = new JLabel("Le d\u00E9 a fait : ");
+		jpanelDe.add(jlabelDe1);
+		jlabelDe1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+												
+		JLabel jlabelDe2 = new JLabel("New label");
+		jpanelDe.add(jlabelDe2);
+		jlabelDe2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 
 		JPanel grille = new JPanel();
 		fond.add(grille, BorderLayout.WEST);
