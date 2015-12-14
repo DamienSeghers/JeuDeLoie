@@ -2,12 +2,13 @@ package be.ephec.UserInterface;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.*;
-
+import net.miginfocom.swing.MigLayout;
 
 
 public class Fenetre2 {
@@ -27,8 +28,9 @@ public class Fenetre2 {
 	 */
 	private void initialize() {
 		frmJeuDeLoie = new JFrame();
+		frmJeuDeLoie.setResizable(false);
 		frmJeuDeLoie.setTitle("Jeu de l'oie");
-		frmJeuDeLoie.setBounds(100, 100, 900, 600);
+		frmJeuDeLoie.setBounds(100, 100, 1024, 627);
 		frmJeuDeLoie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmJeuDeLoie.setLocationRelativeTo(null);
 		Fond fond = new Fond();
@@ -61,7 +63,7 @@ public class Fenetre2 {
 		labelText1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		labelText1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		
-		JLabel labelText2 = new JLabel("JoueurName");
+		JLabel labelText2 = new JLabel("JoueurName");									//ici doit arriver le nom du joueur actif...
 		labelText2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		panel_1.add(labelText2);
 		
@@ -72,6 +74,12 @@ public class Fenetre2 {
 			}
 		});
 		panel.add(btnNewButton, BorderLayout.WEST);
+		
+		JPanel panel_2 = new JPanel();
+		fond.add(panel_2, BorderLayout.WEST);
+		panel_2.setLayout(new MigLayout("", "65[85.00][85.00][85.00][85.00][85.00][85.00][85.00][85.00][85.00][85.00]", "15[85.00][85.00][85.00][85.00][85.00]"));
+		panel_2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.red));
+		panel_2.setOpaque(false);
 	}
 	
 	
