@@ -53,37 +53,22 @@ public class Fenetre {
 										
 		JPanel jpanelCentre = new JPanel();
 		head.add(jpanelCentre, BorderLayout.CENTER);
-		jpanelCentre.setLayout(new BorderLayout(0, 0));
 		jpanelCentre.setOpaque(false);
-										
-		JPanel jpanelJoueur = new JPanel();
-		jpanelCentre.add(jpanelJoueur, BorderLayout.WEST);
-		jpanelJoueur.setOpaque(false);
-										
+		jpanelCentre.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
 		JLabel jlabelJoueurTour = new JLabel("C'est au tour de : ");
-		jpanelJoueur.add(jlabelJoueurTour);
+		jpanelCentre.add(jlabelJoueurTour);
 		jlabelJoueurTour.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 		jlabelJoueurTour.setFont(new Font("Tahoma", Font.PLAIN, 20));
-										
-		JLabel jlableJoueurName = new JLabel("JoueurName");			//ici doit arriver le nom du joueur actif...
-		jpanelJoueur.add(jlableJoueurName);
+		
+		JLabel jlableJoueurName = new JLabel("JoueurName");
+		jpanelCentre.add(jlableJoueurName);
 		jlableJoueurName.setFont(new Font("Tahoma", Font.PLAIN, 20));
-												
-		JPanel jpanelDe = new JPanel();
-		jpanelCentre.add(jpanelDe, BorderLayout.EAST);
-		jpanelDe.setOpaque(false);
-												
-		JLabel jlabelDe1 = new JLabel("Le d\u00E9 a fait : ");
-		jpanelDe.add(jlabelDe1);
-		jlabelDe1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-												
-		JLabel jlabelDe2 = new JLabel("New label");
-		jpanelDe.add(jlabelDe2);
-		jlabelDe2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		
 
 		JPanel grille = new JPanel();
-		fond.add(grille, BorderLayout.WEST);
-		grille.setLayout(new MigLayout("", "65[85.00][85.00][85.00][85.00][85.00][85.00][85.00][85.00][85.00][85.00]", "15[85.00][85.00][85.00][85.00][85.00]"));
+		fond.add(grille, BorderLayout.CENTER);
+		grille.setLayout(new MigLayout("", "65[85,85][85,85][85,85][85,85][85,85][85,85][85,85][85,85][85,85][85,85]", "15[85,85][85,85][85,85][85,85][85,85]"));
 			/*
 			 * "","",""
 			 * parametre general du layout,
@@ -91,6 +76,11 @@ public class Fenetre {
 			 * parametres des colonnes [taille en px]
 			 */
 		grille.setOpaque(false);
+		
+		JPanel posJ1 = new JPanel();
+		posJ1.setBackground(Color.RED);
+		grille.add(posJ1, "cell 9 1,grow");  //colonnes lignes
+		
 	}
 
 
