@@ -1,13 +1,15 @@
 package be.ephec.UserInterface;
 
 import javax.swing.*;
+
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.*;
 import net.miginfocom.swing.MigLayout;
 
 
-public class Fenetre {
+public class Fenetre extends AfficherJoueur {
 
 	private JFrame frmJeuDeLoie;
 
@@ -31,6 +33,7 @@ public class Fenetre {
 		Fond fond = new Fond();
 		frmJeuDeLoie.setContentPane(fond);
 		fond.setLayout(new BorderLayout(0, 0));
+		
 
 		JPanel head = new JPanel();
 		fond.add(head, BorderLayout.NORTH);
@@ -79,7 +82,12 @@ public class Fenetre {
 		
 		JPanel posJ1 = new JPanel();
 		posJ1.setBackground(Color.RED);
+		//posJ1.setOpaque(false);
 		grille.add(posJ1, "cell 9 1,grow");  //colonnes lignes
+		AfficherJoueur joueur1 = new AfficherJoueur();
+		JPanel posJ = new JPanel();
+		posJ1.add(posJ);
+		posJ.add(joueur1);
 		
 	}
 
