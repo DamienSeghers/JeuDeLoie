@@ -1,0 +1,16 @@
+package be.ephec.UserInterface;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import be.ephec.Player.Joueur;
+
+public class AfficherJoueur extends Joueur {
+
+	public AfficherJoueur(){
+
+	}
+	public void paintJoueur(Graphics g){
+		Joueur joueur1 = new Joueur("Joueur1", false, 0,g,Color.blue, 105,115);
+	}
+}
