@@ -1,0 +1,43 @@
+package be.ephec.Player;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Pion2 {
+
+	private int posX, posY;
+	public Color couleur;
+	
+	public Pion2(){
+
+	}
+
+	public Pion2(int posX, int posY){
+		
+	}
+
+	public void paintComponent(Graphics g){
+		g.setColor(couleur);
+		g.fillOval(posX, posY, 40, 40);
+	}
+
+	public Color getColor(){ //affiche la couleur
+		return couleur;
+	}
+	public void setColor(Color couleur){ //recupere la couleur
+		this.couleur = couleur;
+	}
+
+	public int getPosX() {
+		return posX;
+	}
+	public int getPosY() {
+		return posY;
+	}
+	public void setPosX(int posX) { //recupere les coordonnées
+		this.posX = posX;
+	}
+	public void setPosY(int posY){
+		this.posY = posY;
+	}
+}
