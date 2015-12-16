@@ -1,0 +1,17 @@
+package be.ephec.Player;
+
+public class Joueur2 {
+
+	private int postitionPion;
+	private Pion2 monPion = new Pion2();
+	private Boolean etat = false;
+	
+	public Joueur2(){
+		
+	}
+	
+	public void move(){
+		//getPosX;
+	}
+	
+}
