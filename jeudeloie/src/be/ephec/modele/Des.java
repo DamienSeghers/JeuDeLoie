@@ -2,7 +2,7 @@ package be.ephec.modele;
 
 public class Des{
 	
-	//variable 
+	//Variable
 	
 	private int resultat;
 	

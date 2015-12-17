@@ -7,7 +7,7 @@ import javax.swing.JButton;
 
 public class BoutonResetJeu extends JButton implements ActionListener{
 	
-	//variable
+	//Variable
 	
 	private boolean clickReset = false;
 	

@@ -7,7 +7,7 @@ import javax.swing.JButton;
 
 public class BoutonDé extends JButton implements ActionListener{
 	
-	//variable
+	//Variable
 	
 	private boolean clickDe = false;
 	

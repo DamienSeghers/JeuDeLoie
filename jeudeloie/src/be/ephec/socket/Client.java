@@ -1,10 +1,16 @@
-package be.ephec.Network;
+package be.ephec.socket;
 
 import javax.swing.JOptionPane;
 import java.net.*;
 import java.io.*;
 
 public class Client {
+	/**
+	 * Connexion du client vers le "client-hébergeur"
+	 * 
+	 * @param srvIP l'IP du "client-hébergeur"
+	 * @throws IOException IP non-reconnue
+	 */
 	public static void client (String srvIP) throws IOException {
 		String serverAddress = JOptionPane.showInputDialog("Adresse du Serveur SVP: ");
 		String serverPort = JOptionPane.showInputDialog("Port du Serveur SVP: ");

@@ -1,4 +1,4 @@
-package be.ephec.Network;
+package be.ephec.socket;
 
 
 import java.net.*;
@@ -6,9 +6,16 @@ import java.io.*;
 
 public class Serveur {
 	
+	//Variables
+	
 	private String srvIP;
 	private int srvPort;
-
+/**
+ * Création du serveur pour le "client-hébergeur"
+ * 
+ * @throws IOException IP non-reconnue
+ * @throws ClassNotFoundException Object n'est pas correctement créé
+ */
 	public void server (/*String[] args*/) throws IOException, ClassNotFoundException {
 	
 		ServerSocket server = new ServerSocket(6666);  // 0 pour port automatique

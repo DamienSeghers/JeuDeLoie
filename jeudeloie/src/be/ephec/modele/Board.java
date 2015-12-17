@@ -9,7 +9,7 @@ import be.ephec.view.Fenetre;
  */
 public class Board {
 	
-	//Constances
+	//Constantes
 	
 	public final int EXIT_SUCCESS = 1;
 	
