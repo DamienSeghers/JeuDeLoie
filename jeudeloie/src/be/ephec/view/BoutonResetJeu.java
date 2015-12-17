@@ -7,6 +7,8 @@ import javax.swing.JButton;
 
 public class BoutonResetJeu extends JButton implements ActionListener{
 	
+	//variable
+	
 	private boolean clickReset = false;
 	
 	public boolean isClickReset() {
@@ -16,7 +18,10 @@ public class BoutonResetJeu extends JButton implements ActionListener{
 	public void setClickReset(boolean clickReset) {
 		this.clickReset = clickReset;
 	}
-
+	
+	/**
+	 * Méthode Méthode affichant le bouton servant à réinitialiser le jeu
+	 */
 	public BoutonResetJeu(){
 		this.setText("Relancer le jeu");
 		this.setFont(new Font("Tahoma", Font.PLAIN, 15));

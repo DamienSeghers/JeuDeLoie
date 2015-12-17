@@ -3,16 +3,19 @@ package be.ephec.view;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
-/**
- * En tête graphique, elle consiste à regrouper les éléments de ce dernier
- * Il contient le titre, sous-titre et les boutons
- */
 
 public class EnTete extends JPanel{
-	public Titre titre = new Titre(); //JLabel
+	
+	//Variables
+	
+	public Titre titre = new Titre();
 	public BoutonResetJeu boutonReset = new BoutonResetJeu();
 	public BoutonDé boutonDe = new BoutonDé();
 	public IndicateurNom sousTitre = new IndicateurNom();
+	
+	/**
+	 * Méthode servant à générer l'entête de la fenêtre
+	 */
 	public EnTete(){
 
 		this.setLayout(new BorderLayout(0,0));

@@ -6,8 +6,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class BoutonDé extends JButton implements ActionListener{
+	
+	//variable
+	
 	private boolean clickDe = false;
-
+	
+	/**
+	 * Méthode affichant le bouton du dé
+	 */
+	
 	public BoutonDé(){
 		this.setText("Lancer dé");
 		this.setFont(new Font("Tahoma", Font.PLAIN, 15));

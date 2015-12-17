@@ -6,16 +6,25 @@ import java.awt.Color;
 import javax.swing.JPanel;
 
 public class JoueurView extends JPanel {
+	
+	//Constantes
+	
 	private final int X_DEPART = 85;
 	private final int Y_DEPART = 40;
 	private final int DIAMETRE = 85 / 2;
 	private final int MOVE = 90;
+	
+	//Variables 
+	
 	private int x = X_DEPART;
 	private int y = Y_DEPART;
 	private int width = DIAMETRE;
 	private int height = DIAMETRE;
 	public Joueur joueur = new Joueur();
-
+	
+	/**
+	 * Méthode servant à crée le pion
+	 */
 	public void paintComponent(Graphics g) {
 		g.setColor(Color.red);
 		g.drawOval(this.x, this.y, this.width, this.height);
@@ -28,8 +37,13 @@ public class JoueurView extends JPanel {
 	public void setY(int y) {
 		this.y = y;
 	}
-
-public void bougerPion(int position) {
+	
+	/**
+	 * Méthode servant à modifier la position du pion selon la case où il se trouve
+	 * 
+	 * @param position, position de la case où se trouve le joueur
+	 */
+	public void bougerPion(int position) {
 
 		if (position <= 9) {
 			this.setX(X_DEPART + (MOVE * position));

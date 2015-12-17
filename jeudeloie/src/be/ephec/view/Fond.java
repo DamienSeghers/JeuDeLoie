@@ -9,6 +9,10 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class Fond extends JPanel {
+	
+	/**
+	 * Méthode affichant l'image de fond de la fenêtre
+	 */
 	public void paintComponent(Graphics g){
 		
 		try {

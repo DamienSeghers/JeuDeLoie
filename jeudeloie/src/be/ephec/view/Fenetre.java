@@ -3,19 +3,28 @@ package be.ephec.view;
 import javax.swing.*;
 import java.awt.*;
 
-
-
 public class Fenetre extends JFrame{
+	
+	//variable
+	
 	public Fond fond = new Fond();
 	public EnTete entete = new EnTete();
-	public Grille grille = new Grille();
 	public JoueurView pion = new JoueurView();
 	
+	/**
+	 * Méthode servant à crée la fenêtre du jeu
+	 */
 	public Fenetre() {
 		initialize();
 	}
-
+	
+	/**
+	 * Méthode servant à initialiser toute la fenêtre
+	 */
 	private void initialize() {
+		
+		// variable
+		
 		this.setResizable(false);
 		this.setTitle("Jeu de l'oie");
 		this.setBounds(100, 100, 1024, 627);
@@ -30,7 +39,6 @@ public class Fenetre extends JFrame{
 		this.add(entete,BorderLayout.NORTH);
 		
 		//Pion
-		this.add(grille);
 		this.add(pion);
 	}
 }

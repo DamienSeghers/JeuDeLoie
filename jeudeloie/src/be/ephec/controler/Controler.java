@@ -3,6 +3,11 @@ package be.ephec.controler;
 import java.awt.EventQueue;
 import be.ephec.modele.*;
 
+/**
+ * controler du jeu, il lance le runnable
+ *
+ */
+
 public class Controler {
 	
 	public static void main(String[] args) {

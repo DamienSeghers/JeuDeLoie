@@ -3,8 +3,14 @@ package be.ephec.modele;
 import javax.swing.JOptionPane;
 
 public class ListeQuestion {
+	
+	//variable 
+	
 	private boolean resultat;
 	public int nombre = (int)(Math.random()*4);  
+	
+	//tableau de question
+	
 	String tabQuestion[] = {"Question : 2+2 = ?",
 							"Question : 18/2 = ?",
 							"Question : 10*2 = ?",
@@ -16,7 +22,11 @@ public class ListeQuestion {
 	public void setReponse(boolean resultat) {
 		this.resultat = resultat;
 	}
-
+	
+	/**
+	 * Méthode servant à poser la question au joueur
+	 * @return resultat, détermine si la réponse est correcte ou non
+	 */
 	boolean donnerQuestion(){
 		int reponse;
 		String lecture = JOptionPane.showInputDialog(null,tabQuestion[nombre]); 
