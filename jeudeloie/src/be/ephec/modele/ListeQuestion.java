@@ -59,11 +59,11 @@ public class ListeQuestion {
 			break;
 		 }
 		}
-		if (resultat == true) { // ici c'était la faute avec le doucle =
-			System.out.println("Bonne réponse !");
+		if (resultat == true) { 
+			JOptionPane.showMessageDialog(null,"Bonne réponse !");
 		}
 		else {
-			System.out.println("Mauvaise réponse !");
+			JOptionPane.showMessageDialog(null,"Mauvaise réponse !");
 		}
 		return resultat;
 	}

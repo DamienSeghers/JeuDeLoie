@@ -40,10 +40,10 @@ public class Fenetre extends JFrame{
 		//Ajout de l'en-tête comprenant titre, sous-titre, et les deux boutons
 		this.setLayout(new BorderLayout(0,0));
 		this.add(entete,BorderLayout.NORTH);
-		this.add(grille);
+		
 	
-		//Grille
-		//this.add(grille,BorderLayout.WEST);
+		//Pion
+		this.add(grille);
 		this.add(pion);
 		
 		

@@ -9,6 +9,7 @@ public class Joueur { //initialise un joueur
 	//private JoueurView pion = new JoueurView();
 	private Event event = new Event(); // Pour prendre les constantes pour plus de visibilité ( voir faireAction())
 	private ListeQuestion quest = new ListeQuestion();
+	
 	public String getNom() {
 		return nom;
 	}

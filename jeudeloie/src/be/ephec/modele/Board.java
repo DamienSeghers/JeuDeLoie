@@ -20,7 +20,10 @@ public class Board {
 			fen.entete.boutonReset.setClickReset(false);
 		
 	}
-	
+	public void redessinerPion(){
+		fen.pion.bougerPion(fen.pion.joueur.getPosition()); 
+		fen.repaint();
+	}
 	public void win(){
 
 		int lecture = JOptionPane.showConfirmDialog(null, "Voulez vous recommencer? ", 
@@ -46,17 +49,14 @@ public class Board {
 				System.out.println( " Début du tour "+cpt+" en case "+fen.pion.joueur.getPosition());
 				de.lancerDe();
 				System.out.println("De ="+ de.getResultat());
-				//JOptionPane.showMessageDialog(null,de.getResultat());
 				fen.pion.joueur.setPosition(fen.pion.joueur.getPosition() + de.getResultat()); //change la position après le lancer de dé
 				
-				fen.pion.bougerPion(fen.pion.joueur.getPosition()); 
-				fen.repaint();
+				redessinerPion();
 				
 				actionPlayer = event.checkEvent(fen.pion.joueur.getPosition()); //vérifie si action sur la case
 				fen.pion.joueur.faireAction(actionPlayer);
 				
-				fen.pion.bougerPion(fen.pion.joueur.getPosition()); 
-				fen.repaint();
+				redessinerPion();
 				
 				System.out.println("il bouge à la case " + fen.pion.joueur.getPosition()); 
 				System.out.println("Fin du tour "+cpt+" en case "+fen.pion.joueur.getPosition());
@@ -73,7 +73,7 @@ public class Board {
 			}
 		}while(fen.pion.joueur.getPosition() < 31);
 		
-		System.out.println("Win !!");
+		JOptionPane.showMessageDialog(null,fen.pion.joueur.getNom() + " You Win !!");
 		win();
 	}
 		
