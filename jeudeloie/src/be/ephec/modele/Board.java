@@ -54,7 +54,10 @@ public class Board {
 					reinitialiser();
 				}
 				cpt++;
+				//System.out.println( " début du tour "+cpt+" en case "+fen.pion.joueur.getPosition());
 				de.lancerDe();
+				//System.out.println("De ="+ de.getResultat());
+				//JOptionPane.showMessageDialog(null,de.getResultat());
 				fen.pion.joueur.setPosition(fen.pion.joueur.getPosition() + de.getResultat()); //change la position apr�s le lancer de d�
 				
 				bougerJoueur();
@@ -68,7 +71,7 @@ public class Board {
 			}
 		}while(fen.pion.joueur.getPosition() < 31);
 		
-		System.out.println("Win !!");
+		JOptionPane.showMessageDialog(null,fen.pion.joueur.getNom() + " You Win !!");
 		win();
 	}
 		
