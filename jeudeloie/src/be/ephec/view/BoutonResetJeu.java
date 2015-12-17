@@ -26,5 +26,4 @@ public class BoutonResetJeu extends JButton implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		this.clickReset = true;
 	}
-
 }

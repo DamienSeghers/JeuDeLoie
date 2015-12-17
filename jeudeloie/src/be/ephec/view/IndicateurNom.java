@@ -13,5 +13,4 @@ public class IndicateurNom extends JLabel {
 		this.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		this.setFont(new Font("Tahoma", Font.PLAIN, 20));
 	}
-
 }

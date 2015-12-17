@@ -12,18 +12,10 @@ public class Fond extends JPanel {
 	public void paintComponent(Graphics g){
 		
 		try {
-			Image img = ImageIO.read(new File("plateau.jpg")); // Appelle et cherche l'image
+			Image img = ImageIO.read(new File("plateau.jpg"));
 			g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this); 
-			/* 
-			 * img => image (à la racin du projet)
-			 * 0,0 => point de dépard
-			 * this.getWidth(), this.getHeight() => taille de l'image, varie selon la fenêtre 
-			 * this => observer 
-			 */
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
-		
+		}	
 	}
 }

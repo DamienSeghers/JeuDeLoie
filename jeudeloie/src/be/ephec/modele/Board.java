@@ -3,7 +3,6 @@ package be.ephec.modele;
 import javax.swing.JOptionPane;
 
 import be.ephec.view.Fenetre;
-import be.ephec.view.JoueurView;
 
 public class Board {
 	public final int EXIT_SUCCESS = 1;
@@ -18,11 +17,10 @@ public class Board {
 			fen.pion.joueur.setPosition(0);
 			cpt = 0;
 			fen.entete.boutonReset.setClickReset(false);
-		
 	}
 	
 	public void interagirCase(){
-		actionPlayer = event.checkEvent(fen.pion.joueur.getPosition()); //v�rifie si action sur la case
+		actionPlayer = event.checkEvent(fen.pion.joueur.getPosition());
 		fen.pion.joueur.faireAction(actionPlayer);
 	}
 	
@@ -54,12 +52,9 @@ public class Board {
 					reinitialiser();
 				}
 				cpt++;
-				//System.out.println( " début du tour "+cpt+" en case "+fen.pion.joueur.getPosition());
 				de.lancerDe();
-				//System.out.println("De ="+ de.getResultat());
-				//JOptionPane.showMessageDialog(null,de.getResultat());
-				fen.pion.joueur.setPosition(fen.pion.joueur.getPosition() + de.getResultat()); //change la position apr�s le lancer de d�
-				
+				JOptionPane.showMessageDialog(null, " Dé = " + de.getResultat());
+				fen.pion.joueur.setPosition(fen.pion.joueur.getPosition() + de.getResultat());
 				bougerJoueur();
 				interagirCase();
 				bougerJoueur();

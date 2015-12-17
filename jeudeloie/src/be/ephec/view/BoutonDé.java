@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 
 public class BoutonDé extends JButton implements ActionListener{
@@ -13,7 +12,6 @@ public class BoutonDé extends JButton implements ActionListener{
 	public BoutonDé(){
 		this.setText("Lancer dé");
 		this.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		//boutonLancerDe.setEnabled(false);			//desactive le bouton pour le(s) joueur(s) dont c'est pas le tour
 		this.addActionListener((ActionListener) this);
 	}
 	
@@ -22,7 +20,6 @@ public class BoutonDé extends JButton implements ActionListener{
 		System.out.print("");
 		return clickDe;
 	}
-
 	public void setClickDe(boolean activationDe) {
 		this.clickDe = activationDe;
 	}

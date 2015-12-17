@@ -25,7 +25,6 @@ public class JoueurView extends JPanel {
 	public void setX(int x) {
 		this.x = x;
 	}
-
 	public void setY(int y) {
 		this.y = y;
 	}
@@ -50,8 +49,6 @@ public void bougerPion(int position) {
 		} else if (position >= 31){
 			this.setX(X_DEPART + MOVE * 9);
 			this.setY(Y_DEPART + MOVE * 4);
-		}
-		
+		}	
 	}
-
 }
