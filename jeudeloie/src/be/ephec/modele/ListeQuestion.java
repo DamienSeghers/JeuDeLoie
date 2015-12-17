@@ -3,6 +3,8 @@ package be.ephec.modele;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class ListeQuestion {
 	private boolean resultat;
 	public int nombre = (int)(Math.random()*4);  //générer un nombre entre 0 et 3
@@ -21,9 +23,10 @@ public class ListeQuestion {
 
 	boolean donnerQuestion(){
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println(tabQuestion[nombre]); //affiche la question
-		int reponse = sc.nextInt(); //récuperer ce que l'on a écrit
+		int reponse;
+		Scanner sc = new Scanner(System.in); //posé question
+		String lecture = JOptionPane.showInputDialog(null,tabQuestion[nombre]); //affiche la question
+		reponse = Integer.parseInt(lecture); //récuperer ce que l'on a écrit
 		boolean resultat = false;  // initialise la variable du return
 		
 		switch (nombre) {
