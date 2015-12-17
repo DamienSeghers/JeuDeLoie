@@ -3,10 +3,6 @@ package be.ephec.modele;
 import javax.swing.JOptionPane;
 import be.ephec.view.Fenetre;
 
-/**
- * @author Da
- *
- */
 public class Board {
 	
 	//Constantes
