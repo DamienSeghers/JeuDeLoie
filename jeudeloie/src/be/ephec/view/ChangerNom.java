@@ -1,4 +1,4 @@
-package be.ephec.view;
+/*package be.ephec.view;
 
 import java.awt.Font;
 import javax.swing.JLabel;
@@ -15,3 +15,4 @@ public class ChangerNom extends JLabel{
 	}
 
 }
+*/

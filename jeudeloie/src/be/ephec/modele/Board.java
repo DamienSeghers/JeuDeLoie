@@ -11,7 +11,7 @@ public class Board {
 	public int actionPlayer;
 
 	public Event event = new Event();
-	public Dé de = new Dé();
+	public DÃ© de = new DÃ©();
 	public Fenetre fen = new Fenetre();
 	
 	public void reinitialiser(){
@@ -20,10 +20,17 @@ public class Board {
 			fen.entete.boutonReset.setClickReset(false);
 		
 	}
-	public void redessinerPion(){
+	
+	public void interagirCase(){
+		actionPlayer = event.checkEvent(fen.pion.joueur.getPosition()); //vï¿½rifie si action sur la case
+		fen.pion.joueur.faireAction(actionPlayer);
+	}
+	
+	public void bougerJoueur(){
 		fen.pion.bougerPion(fen.pion.joueur.getPosition()); 
 		fen.repaint();
 	}
+	
 	public void win(){
 
 		int lecture = JOptionPane.showConfirmDialog(null, "Voulez vous recommencer? ", 
@@ -42,38 +49,26 @@ public class Board {
 		do{ 
 			
 			if(fen.entete.boutonDe.isClickDe()==true){
+				
 				if(fen.entete.boutonReset.isClickReset()){
 					reinitialiser();
 				}
 				cpt++;
-				System.out.println( " Début du tour "+cpt+" en case "+fen.pion.joueur.getPosition());
 				de.lancerDe();
-				System.out.println("De ="+ de.getResultat());
-				fen.pion.joueur.setPosition(fen.pion.joueur.getPosition() + de.getResultat()); //change la position après le lancer de dé
+				fen.pion.joueur.setPosition(fen.pion.joueur.getPosition() + de.getResultat()); //change la position aprï¿½s le lancer de dï¿½
 				
-				redessinerPion();
-				
-				actionPlayer = event.checkEvent(fen.pion.joueur.getPosition()); //vérifie si action sur la case
-				fen.pion.joueur.faireAction(actionPlayer);
-				
-				redessinerPion();
-				
-				System.out.println("il bouge à la case " + fen.pion.joueur.getPosition()); 
-				System.out.println("Fin du tour "+cpt+" en case "+fen.pion.joueur.getPosition());
-				System.out.println("");
+				bougerJoueur();
+				interagirCase();
+				bougerJoueur();
 				if(actionPlayer == 2){
 					cpt--;
 				}
-				if(fen.pion.joueur.getPosition() < 31) {
-					System.out.println(" Relance le Dé");
-				}
-				
 				fen.entete.boutonDe.setClickDe(false);
 
 			}
 		}while(fen.pion.joueur.getPosition() < 31);
 		
-		JOptionPane.showMessageDialog(null,fen.pion.joueur.getNom() + " You Win !!");
+		System.out.println("Win !!");
 		win();
 	}
 		

@@ -29,7 +29,7 @@ public class Joueur { //initialise un joueur
 		this.sonTour = sonTour;
 	}
 	
-	public void bougerJoueur(){
+	public void bougerException(){
 		switch(this.position){
 		case 6 : this.setPosition(14); break;
 		case 12 : this.setPosition(30); break;
@@ -37,7 +37,7 @@ public class Joueur { //initialise un joueur
 		case 16 : this.setPosition(26); break;
 		case 24 : this.setPosition(18); break;
 		case 29 : this.setPosition(13); break;
-		default : System.out.println("ERREUR OMG OMG OMG OMG");
+		default : System.out.println("ERREUR");
 		}
 	}
 	
@@ -58,7 +58,7 @@ public class Joueur { //initialise un joueur
 		}
 			
 		if(typeAction == event.MOVE_ACTION){
-			bougerJoueur();
+			bougerException();
 			this.sonTour = false;
 		}
 		if(typeAction == event.QUEST_ACTION){
