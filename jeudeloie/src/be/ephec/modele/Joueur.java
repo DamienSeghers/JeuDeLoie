@@ -1,7 +1,5 @@
 package be.ephec.modele;
 
-import be.ephec.view.JoueurView;
-
 public class Joueur {  
 	private String nom = "Damien";
 	private int position = 0;

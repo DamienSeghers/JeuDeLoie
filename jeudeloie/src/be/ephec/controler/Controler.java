@@ -1,10 +1,7 @@
 package be.ephec.controler;
 
-import java.util.Scanner;
 import java.awt.EventQueue;
-import java.math.*; 
 import be.ephec.modele.*;
-import be.ephec.view.*;
 
 public class Controler {
 	

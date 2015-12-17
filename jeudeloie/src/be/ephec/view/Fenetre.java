@@ -1,10 +1,8 @@
 package be.ephec.view;
 
 import javax.swing.*;
-import be.ephec.modele.Dé;
-import java.awt.event.*;
 import java.awt.*;
-import net.miginfocom.swing.MigLayout;
+
 
 
 public class Fenetre extends JFrame{
