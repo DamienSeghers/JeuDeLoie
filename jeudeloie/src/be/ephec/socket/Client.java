@@ -6,12 +6,12 @@ import java.io.*;
 
 public class Client {
 	/**
-	 * Connexion du client vers le "client-hébergeur"
+	 * Connexion du client vers le "client-hÃ©bergeur"
 	 * 
-	 * @param srvIP l'IP du "client-hébergeur"
+	 * @param srvIP l'IP du "client-hÃ©bergeur"
 	 * @throws IOException IP non-reconnue
 	 */
-	public static void client (String srvIP) throws IOException {
+	public static void main /*client*/ (String srvIP) throws IOException {
 		String serverAddress = JOptionPane.showInputDialog("Adresse du Serveur SVP: ");
 		String serverPort = JOptionPane.showInputDialog("Port du Serveur SVP: ");
 		Socket socket = new Socket(srvIP/*serverAddress*/, 6666 /*Integer.parseInt(serverPort)*/);
