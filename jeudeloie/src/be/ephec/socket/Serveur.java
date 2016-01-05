@@ -11,12 +11,12 @@ public class Serveur {
 	private String srvIP;
 	private int srvPort;
 /**
- * Création du serveur pour le "client-hébergeur"
+ * CrÃ©ation du serveur pour le "client-hÃ©bergeur"
  * 
  * @throws IOException IP non-reconnue
- * @throws ClassNotFoundException Object n'est pas correctement créé
+ * @throws ClassNotFoundException Object n'est pas correctement crÃ©Ã©
  */
-	public void server (/*String[] args*/) throws IOException, ClassNotFoundException {
+	public void main /*server*/ (/*String[] args*/) throws IOException, ClassNotFoundException {
 	
 		ServerSocket server = new ServerSocket(6666);  // 0 pour port automatique
 		srvIP = InetAddress.getLocalHost().getHostAddress();
